@@ -7,6 +7,13 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class CommonCodeService {
+    public HashMap<String, Object> mixed(Integer pageNumber, Integer pkid){
+        HashMap<String, Object> resultMap = new HashMap<>();
+        resultMap.put("list", this.list(pageNumber));
+        resultMap.put("view", this.view(pkid));
+        return resultMap;
+    }
+
     public ArrayList<HashMap<String, Object>> list(Integer pageNumber){
         ArrayList<HashMap<String, Object>> itemList = new ArrayList<HashMap<String, Object>>();
  
