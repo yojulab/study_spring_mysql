@@ -13,7 +13,7 @@ services:
     ports:
       - "8080:8080"  
   mysql:
-    container_name: ${CONTAINER_NAME_PREFIX}_mysql
+    container_name: mysql8
     image: mysql:8
     restart: always
     environment:
