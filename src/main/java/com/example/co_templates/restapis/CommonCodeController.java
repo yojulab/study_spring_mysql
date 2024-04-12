@@ -19,6 +19,12 @@ public class CommonCodeController {
     @Autowired
     CommonCodeService commonCodeService;
 
+    @GetMapping("/r/commonCode/callDao")
+    public void callDao(){
+        commonCodeService.callDao();
+        return ;
+    }
+
     @GetMapping("/r/commonCode/mixed/{pageNumber}/{pk_id}")
     public ResponseEntity<HashMap<String, Object>> mixed(@PathVariable("pageNumber") Integer pageNumber,
             @PathVariable("pk_id") Integer pkId) {
